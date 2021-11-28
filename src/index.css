@@ -1,13 +1,104 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+ :root{
+ 	--theme:  deeppink;
+ 	--theme-2: hotpink;
+ }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+	background-color: #212529;
+}
+ #root{
+ 	position: absolute;
+ 	top: 50%;
+ 	left: 50%;
+ 	transform: translate(-50%, -50%);
+ 	color: black;
+ 	display: flex;
+ 	justify-content: center;
+ 	background-color: whitesmoke;
+ 	align-items: center;
+ 	padding: 0px;
+ 	margin: auto 0;
+ }
+ .board{
+ 	width: auto;
+ 	height: auto;
+ 	border: solid 1px #212529;
+ 	display: block;
+ }
+
+ .row{
+ 	display: flex;
+ 	flex-direction: row;
+ }
+
+.square{
+	border: solid 1px #212529;
+	padding: 5px;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 35px;
+}.square:hover{
+	color: white;
+	background-color: #212529;
+	cursor: pointer;
+}
+.val{
+	font-size: 17px;
+}
+.choose{
+	position: absolute;
+	background-color: var(--theme);
+	opacity: 0.9;
+	width: 188px;
+	height: 188px;
+	display: block;
+	color: white;
+}.choose div{
+	display: flex;
+	justify-content: space-between;
+	font-size: 30px;
+	width: 150px;
+	height: 35px;
+	margin: 70px auto;
+}.choose span{
+	background-color: var(--theme-2);
+	padding-left: 25px;
+	padding-right: 25px;
+}.choose span:hover{
+	opacity: 0.7;
+	cursor: pointer;
+}.choose p{
+	position: absolute;
+	font-size: 18px;
+	margin: 42px 20px;
+}.choose #matchText{
+	font-size: 17px;
+	text-align: center;
+}.choose #retBtn{
+	text-align: center;
+	font-size: 18px;
+	background-color: var(--theme-2);
+	padding: 5px;
+}.choose #retBtn:hover{
+	opacity: 0.8;
+	cursor: pointer;
+}#reset{
+	background-color: var(--theme-2);
+	color: white;
+	text-align: center;
+	padding: 5px;
+	font-size: 18px;
+}#reset:hover{
+	opacity: 0.8;
+	cursor: pointer;
+}#playerAv{
+	margin: 0px;
+	text-align: center;
+	padding: 10px;
+	margin-bottom: -1px;
+	margin-left: -1px;
+	background-color: #212529;
+	color: white;
 }
